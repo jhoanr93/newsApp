@@ -10,7 +10,7 @@ import Grid from '@mui/material/Grid';
 
 
 export const News = ({news}) => {
-
+    
     const { urlToImage, title, description, source, url } = news;
   return (
     <Grid item md={6} lg={4}>
@@ -19,10 +19,11 @@ export const News = ({news}) => {
         <CardMedia 
                 component="img"
                 alt={`Image of new ${title}`}
-                image="https://images.wsj.net/im-589547/social"
+                image={urlToImage}
                 height={"250"}
                 />
             )}
+ 
             <CardContent>
             <Typography gutterBottom variant="body1" color="error">
                     {source.name}
